@@ -1,0 +1,47 @@
+
+
+
+
+
+테이블 설계 
+
+idx int PRIMARY KEY AUTO_INCREMENT
+id varchar(20) NOT NULL 
+pw varchar(20) NOT NULL
+name varchar(20) NOT NULL
+birth varchar(50) NOT NULL
+gender varchar(20) NOT NULL
+email varchar(50) NOT NULL
+nation varchar(30) NOT NULL
+hp varchar(20) NOT NULL
+create_date timestamp DEFAULT CURRENT_TIMESTAMP
+
+CREATE TABLE naver_member(
+    idx int PRIMARY KEY AUTO_INCREMENT,
+    id VARCHAR(20) NOT NULL,
+    pw VARCHAR(20) NOT NULL,
+    name VARCHAR(20) NOT NULL,
+    birth VARCHAR(50) NOT NULL,
+    gender VARCHAR(20) NOT NULL,
+    email VARCHAR(50) NOT NULL,
+    nation VARCHAR(30) NOT NULL,
+    hp VARCHAR(20) NOT NULL,
+    create_date timestamp DEFAULT CURRENT_TIMESTAMP
+);
+
+
+localhost:8080/0510네이버daodto/회원가입_로그인_수정_삭제_네이버/signup.jsp
+localhost:8080/jsp/0510네이버daodto/회원가입_로그인_수정_삭제_네이버/signin.jsp
+localhost:8080/jsp/0510네이버daodto/회원가입_로그인_수정_삭제_네이버/update.jsp
+localhost:8080/jsp/0510네이버daodto/회원가입_로그인_수정_삭제_네이버/delete.jsp
+localhost:8080/0510네이버daodto/회원가입_로그인_수정_삭제_네이버/main.jsp
+
+update.jsp
+update_action.jsp 
+
+delete_action.jsp 
+delete.jsp 
+
+signin.jsp
+signin_action.jsp 
+
