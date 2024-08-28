@@ -72,8 +72,17 @@ body {
   align-items: center;
   flex-wrap: wrap;
   margin-top: 0;
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  transition: max-height 2s, opacity 3s, margin 250ms ease;
 }
 
+.age-calc.expand {
+  margin-top: 30px;
+  max-height: 1000px;
+  opacity: 1;
+}
 .age-calc .age-box {
   position: relative;
   background: #fff;
@@ -114,4 +123,41 @@ body {
     width: 600px;
     margin: 0 auto;
   }
-}`
+  .age-calc .age-box {
+    width: 150px;
+    margin: 15px;
+  }
+  .age-calc .age-box p.header {
+    padding: 10px 20px;
+    font-size: 1rem;
+  }
+  .age-calc .age-box .value {
+    padding: 30px 20px;
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .box {
+    width: 300px;
+  }
+  .box .date-picker {
+    display: block;
+  }
+  .box .date-picker input {
+    margin: 10px 0;
+    width: 100%;
+  }
+  .age-calc .age-box {
+    width: 120px;
+    margin: 5px;
+  }
+  .age-calc .age-box p.header {
+    padding: 10px 5px;
+    font-size: .8rem;
+  }
+  .age-calc .age-box .value {
+    padding: 30px 5px;
+    font-size: 0.9em;
+  }
+}
