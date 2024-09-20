@@ -1,0 +1,1 @@
+{"version":3,"names":[],"mappings":"","sources":["CommonSearchBar.module.scss"],"sourcesContent":[".searchBar {\n  display: flex;\n  align-items: center;\n\n  gap: 28px;\n\n  &__search {\n    display: flex;\n    align-items: center;\n    justify-content: flex-start;\n\n    width: 50vw;\n    padding: 14px;\n    border-radius: 8px;\n  }\n}"],"file":"CommonSearchBar.module.css"}
