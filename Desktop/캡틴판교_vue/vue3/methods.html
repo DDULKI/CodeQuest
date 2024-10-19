@@ -1,0 +1,23 @@
+<!-- HTML -->
+<div id="app">
+  <p>{{ count }}</p>
+  <!-- 버튼을 클릭할 때마다 오른쪽을 갱신해라 너무 신기하네 !? -->
+  <button v-on:click="addCount">+</button> 
+</div>
+
+<!-- JavaScript -->
+<script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+<script>
+  Vue.createApp({
+    data() {
+      return {
+        count : 0
+      }
+    }, 
+    methods: {
+      addCount() {
+        this.count++; // createApp, reactivity에 접근하겠다. 
+      }
+    }
+  }).mount('#app');
+</script>
