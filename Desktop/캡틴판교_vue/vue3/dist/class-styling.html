@@ -1,0 +1,35 @@
+<style>
+  .primary {
+    color: coral;
+  }
+</style>
+
+<!-- HTML -->
+<div id="app">
+
+  <h1>클래스 바인딩</h1>
+
+  <div v-bind:class="textclass">데이터 바인딩 예제 </div>
+
+  <!-- id 바인딩 
+       v-bind: 의 축약어는 : 
+  -->
+   <h1>아이디 바인딩</h1>
+   <section v-bind:id="sectionId" :style="sectionStyle">
+    반갑습니다.
+   </section>
+</div>
+
+<!-- JavaScript -->
+<script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+<script>
+  Vue.createApp({
+    data() {
+      return {
+        textclass: 'primary',
+        sectionId: 'tab1',
+        sectionStyle: {color: 'red'}
+      }
+    }
+  }).mount('#app')
+</script>
