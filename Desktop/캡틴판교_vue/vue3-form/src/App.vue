@@ -14,28 +14,51 @@
 
 <script>
   import axios from 'axios';
+//import { log } from 'console';
+// import { response } from 'express';
+import { ref } from 'vue';
 
-  export default {
-    data() {
-      return {
-        username: '',
-        password: '',
-      }
-  },
-  methods: {
-    submitForm() {
-       //event.preventDefault(); // 기본적인 동작을 막기 
-      const data = {
-        username: this.username,
-        password: this.password
-      }
-      axios.post('https://jsonplaceholder.typicode.com/users/', data)
-        .then(response => {
-          console.log(response);
-        })
-      console.log('제출됨')
-      }
+export default {
+  setup() {
+    // data 
+    var username = ref('');
+    var password = ref('');
+
+    //methods
+    var submitForm = () => {
+      axios.post('https://jsonplaceholder.typicode.com/users/', {
+        username: username.value,
+        password: password.value
+      }).then(response => {
+        console.log(response);
+      })
     }
+     return { 
+       username,
+       password,
+      submitForm
+     }
+    },
+  //   data() {
+  //     return {
+  //       username: '',
+  //       password: '',
+  //     }
+  // },
+  // methods: {
+  //   submitForm() {
+  //      //event.preventDefault(); // 기본적인 동작을 막기 
+  //     const data = {
+  //       username: this.username,
+  //       password: this.password
+  //     }
+  //     axios.post('https://jsonplaceholder.typicode.com/users/', data)
+  //       .then(response => {
+  //         console.log(response);
+  //       })
+  //     console.log('제출됨')
+  //     }
+  //   }
   }
 </script>
 
